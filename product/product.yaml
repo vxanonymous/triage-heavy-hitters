@@ -1,0 +1,11 @@
+_ > nanoagent.plugin.v0001.ProductConfig:
+tagline: "Find what is flooding your errors, in one pass and small memory"
+summary: "Generates a seeded access log with a planted outage, then finds the endpoints, clients or users that dominate its traffic or its 5xx errors with the Misra-Gries algorithm, keeping only ceil(1/epsilon) counters however long the log is."
+highlights:
+  - "Every reported count is within N/(k+1) of the truth, and every true heavy hitter is reported"
+  - "Works offline: the same seed always gives the same log, byte for byte"
+  - "Filter by status class to see who is behind the 5xx errors"
+steps:
+  - "Generate an access log from a seed and a request count"
+  - "Pick a column, a status class and a threshold phi"
+  - "Read the heavy hitters, or ask the agent which endpoint the incident hit"
